@@ -22,6 +22,8 @@ import static com.fasterxml.jackson.dataformat.csv.CsvSchema.builder;
 public class AlbumsUpdater {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
+
+
     private final ObjectReader objectReader;
     private final BlobStore blobStore;
     private final AlbumsBean albumsBean;
@@ -39,6 +41,8 @@ public class AlbumsUpdater {
 
         objectReader = new CsvMapper().readerFor(Album.class).with(schema);
     }
+
+
 
     public void update() throws IOException {
         Optional<Blob> maybeBlob = blobStore.get("albums.csv");

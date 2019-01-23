@@ -1,9 +1,9 @@
-package org.superbiz.moviefun;
+package org.superbiz.moviefun.cfsupport;
 
 import org.junit.Test;
 
 import static org.hamcrest.core.IsEqual.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class ServiceCredentialsTest {
     @Test
